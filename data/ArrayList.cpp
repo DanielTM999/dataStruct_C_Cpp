@@ -5,7 +5,7 @@
 #include <iostream>
 
 template <typename T>
-struct ArrayList{
+class ArrayList{
 private:
     T* data;
     int capacity;
@@ -26,7 +26,10 @@ private:
     }
 
 public:
-    ArrayList() : data(nullptr), size(0), capacity(2){
+    ArrayList(){
+        data = nullptr;
+        size = 0;
+        capacity = 2;
         data =  static_cast<T*>(malloc(capacity * sizeof(T)));
     }
 
@@ -114,18 +117,20 @@ public:
     }
 
     void print(){
-         for (int i = 0; i < size; i++) {
-            if (std::is_same<T, int>::value) {
-                printf("%d", data[i]);
-            } else if (std::is_same<T, float>::value) {
-                printf("%f", data[i]);
-            } else if (std::is_same<T, char>::value){
-                printf("%c", data[i]);
-            } else if (std::is_same<T, double>::value) {
-                printf("%lf", static_cast<double>(data[i]));
-            }
+        for (int i = 0; i < size; i++) {
+            std::cout<< data[i] << std::endl;
         }
     }
 
 };
+
+
+int main(){
+    ArrayList<int> lista;
+
+    lista.Add(1);
+    lista.Add(5);
+
+    lista.print();
+}
 
