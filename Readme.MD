@@ -40,4 +40,10 @@ int main() {
 
     return 0;
 }
+```
 
+# Stack - Estrutura de Dados em C/C++
+
+## Descrição
+
+A desenvolver
