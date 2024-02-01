@@ -13,6 +13,20 @@ O `ArrayList` é uma implementação simples de uma lista dinâmica em C/C++, pr
 - **Operações Básicas:** Inclui operações comuns, como adicionar elementos, remover elementos, obter um elemento pelo índice, encontrar o índice de um elemento, verificar se está vazia, entre outras.
 - **Iteração:** Suporta a iteração através dos elementos usando a função `forEach`.
 
+## funçoes
+- **Add(T element);**: adiciona na lista.
+- **Add(T element, int pos);**: adiciona na lista em uma posição especifica.
+- **remove(int index);**: remove o elemento na posição especificada.
+- **get(int index);**: retorna o elemento na posição especificada.
+- **indexOf(T elemento);**: retorna o índice da primeira ocorrência do elemento na lista.
+- **length();**: retorna o tamanho da lista.
+- **clear();**: limpa a lista.
+- **isEmpty*();**:* verifica se a lista está vazia.
+- **toArray();**: retorna um array contendo os elementos da lista.
+- **forEach(void (*func)(T));**: executa a função fornecida em cada elemento da lista.
+- **copyList(ArrayList<T>& listaParaCopiar);**: copia os elementos da lista atual para outra lista.
+- **print();**: imprime os elementos da lista.
+
 ## Uso Básico
 
 ```cpp
@@ -53,13 +67,16 @@ A `LinkedList` é uma implementação simples de uma lista ligada em C/C++, proj
 - **Alocação Dinâmica:** A estrutura utiliza alocação dinâmica de memória para permitir o crescimento automático conforme a necessidade.
 - **Operações Básicas:** Inclui operações comuns, como adicionar elementos no início e no final, remover elementos do início e do final, obter um elemento pelo índice, verificar o tamanho da lista, entre outras.
 - **Tipos Genéricos:** Pode ser usado com diferentes tipos de dados, incluindo inteiros, floats, caracteres, etc.
+- **Iteração:** Suporta a iteração através dos elementos usando a função `forEach`.
 
 ## funçoes
 - **addToFront(T element);**: Adiciona um elemento na base da lista.
 - **addToBack(T element);**: Adiciona um elemento no final da lista.
 - **removeBack();**: Remove o elemento do final da lista.
 - **removeFront();**: Remove o elemento do inicio da lista.
-- **toArray();**: Obtem a lista como array
+- **forEach(void (*func)(T));**: executa a função fornecida em cada elemento da lista.
+- **toArray();**: Obtem a lista como array.
+- **clear();**: limpa a lista.
 
 ## Uso Básico
 

@@ -110,7 +110,7 @@ public:
         return array;
     }
 
-    void forEach(void (*func)(T elemento)){
+    void forEach(void (*func)(T)){
         for (int i = 0; i < size; i++) {
             func(data[i]);
         }
@@ -137,6 +137,8 @@ int main(){
     lista.Add(1);
     lista.Add(5);
 
-    lista.print();
+    lista.forEach([](int x){
+        std::cout << "valor: " << x << std::endl;
+    });
 }
 

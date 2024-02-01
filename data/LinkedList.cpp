@@ -1,4 +1,5 @@
 #include <iostream>
+#include <functional>
 
 template<typename T>
 class LinkedList
@@ -114,6 +115,28 @@ class LinkedList
             return list;
         }
 
+        void clear(){
+
+            Node* current = head;
+            while (current) {
+                Node* temp = current;
+                current = current->next;
+                delete temp;
+            }
+            size = 0;
+            head = nullptr;
+        }
+
+        void forEach(void (*func)(T)){
+            Node* temp = head;
+            while (temp->next)
+            {
+                func(temp->data);
+                temp = temp->next;
+            }
+            func(temp->data);
+        }
+
         void print(){
             Node* temp = head;
             while(temp){
@@ -130,6 +153,8 @@ int main(){
     link.addToFront(3);
     link.addToFront(4);
 
-
+    link.forEach([](int elemento) {
+        std::cout << "Elemento: " << elemento << std::endl;
+    });
     return 0;
 }
