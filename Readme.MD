@@ -110,7 +110,7 @@ int main() {
 }
 ```
 
-# Stack - Estrutura de Dados em C/C++
+# ArrayStack/LinkedStack - Estrutura de Dados em C/C++
 
 ## Descrição
 
@@ -140,6 +140,30 @@ A `Stack` é uma implementação simples de uma pilha em C/C++, projetada para f
 int main() {
     // Criando uma instância da ArrayStack
     ArrayStack<int> pilha;
+
+    // Adicionando elementos à pilha
+    pilha.push(1);
+    pilha.push(5);
+
+    // Iterando e imprimindo os elementos
+    pilha.forEach([](int x) {
+        cout << x << endl;
+    });
+
+    // Removendo um elemento
+    int elementoRemovido = pilha.pop();
+    int elementoTopo = pilha.peek();
+    
+    return 0;
+}
+```
+
+```cpp
+#include "LinkedStack.h"
+
+int main() {
+    // Criando uma instância da ArrayStack
+    LinkedStack<int> pilha;
 
     // Adicionando elementos à pilha
     pilha.push(1);
