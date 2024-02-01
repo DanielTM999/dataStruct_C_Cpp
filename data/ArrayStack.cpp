@@ -82,8 +82,15 @@ class ArrayStack{
                 copyArray[i] = array[i];
             }
 
-        return copyArray;
-    }
+            return copyArray;
+        }
+
+        void clear(){
+            free(array);
+            size = 0;
+            capacity = 2;
+            array =  static_cast<T*>(malloc(capacity * sizeof(T)));
+        }
 };
 
 int main(){
@@ -91,8 +98,9 @@ int main(){
 
     stack.push(1);
     stack.push(5);
+    stack.clear();
 
-    cout << stack.peek() << endl;
+    cout << stack.isEmpty() << endl;
 
     return 0;
 }

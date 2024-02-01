@@ -98,6 +98,10 @@ class LinkedList
             
         }
 
+        bool isEmpty(){
+            return size == 0;
+        }
+
         int lenght(){
             return size;
         }

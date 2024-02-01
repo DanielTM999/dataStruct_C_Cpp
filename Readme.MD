@@ -21,7 +21,7 @@ O `ArrayList` é uma implementação simples de uma lista dinâmica em C/C++, pr
 - **indexOf(T elemento);**: retorna o índice da primeira ocorrência do elemento na lista.
 - **length();**: retorna o tamanho da lista.
 - **clear();**: limpa a lista.
-- **isEmpty*();**:* verifica se a lista está vazia.
+- **isEmpty();**:* verifica se a lista está vazia.
 - **toArray();**: retorna um array contendo os elementos da lista.
 - **forEach(void (*func)(T));**: executa a função fornecida em cada elemento da lista.
 - **copyList(ArrayList<T>& listaParaCopiar);**: copia os elementos da lista atual para outra lista.
@@ -74,6 +74,7 @@ A `LinkedList` é uma implementação simples de uma lista ligada em C/C++, proj
 - **addToBack(T element);**: Adiciona um elemento no final da lista.
 - **removeBack();**: Remove o elemento do final da lista.
 - **removeFront();**: Remove o elemento do inicio da lista.
+- **isEmpty();**:* verifica se a lista está vazia.
 - **forEach(void (*func)(T));**: executa a função fornecida em cada elemento da lista.
 - **toArray();**: Obtem a lista como array.
 - **clear();**: limpa a lista.
@@ -129,6 +130,7 @@ A `Stack` é uma implementação simples de uma pilha em C/C++, projetada para f
 - **forEach(void (*func)(T));**: Executa a função fornecida em cada elemento da pilha.
 - **toArray();**: Retorna um array contendo os elementos da pilha.
 - **peek();**: Retorna o elemento do topo da pilha sem remover.
+- **clear();**: limpa a pilha.
 
 ## Uso Básico
 
