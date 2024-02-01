@@ -33,6 +33,12 @@ public:
         data =  static_cast<T*>(malloc(capacity * sizeof(T)));
     }
 
+    ~ArrayList(){
+        free(data);
+        size = 0;
+        capacity = 2;
+    }
+
     void Add(const T element){
         grow();
         data[size] = element;

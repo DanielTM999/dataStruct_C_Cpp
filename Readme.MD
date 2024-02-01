@@ -42,8 +42,58 @@ int main() {
 }
 ```
 
+# LinkedList - Estrutura de Dados em C/C++
+
+## Descrição
+
+A `LinkedList` é uma implementação simples de uma lista ligada em C/C++, projetada para fornecer funcionalidades básicas de armazenamento e manipulação de elementos.
+
+## Características
+
+- **Alocação Dinâmica:** A estrutura utiliza alocação dinâmica de memória para permitir o crescimento automático conforme a necessidade.
+- **Operações Básicas:** Inclui operações comuns, como adicionar elementos no início e no final, remover elementos do início e do final, obter um elemento pelo índice, verificar o tamanho da lista, entre outras.
+- **Tipos Genéricos:** Pode ser usado com diferentes tipos de dados, incluindo inteiros, floats, caracteres, etc.
+
+## funçoes
+- **addToFront(T element);**: Adiciona um elemento na base da lista.
+- **addToBack(T element);**: Adiciona um elemento no final da lista.
+- **removeBack();**: Remove o elemento do final da lista.
+- **removeFront();**: Remove o elemento do inicio da lista.
+- **toArray();**: Obtem a lista como array
+
+## Uso Básico
+
+```cpp
+#include "LinkedList.h"
+
+int main() {
+    // Criando uma instância da LinkedList
+    LinkedList<int> lista;
+
+    // Adicionando elementos no início e no final
+    lista.addToFront(5);
+    lista.addToFront(3);
+    lista.addToBack(8);
+
+    // Removendo elementos do início e do final
+    lista.removeFront();
+    lista.removeBack();
+
+    // Obtendo um elemento pelo índice
+    int elemento = lista.get(0);
+
+    // Obtendo o tamanho da lista
+    int tamanho = lista.length();
+
+    // Obtendo a lista como array
+    int* array = lista.toArray();
+
+    return 0;
+}
+```
+
 # Stack - Estrutura de Dados em C/C++
 
 ## Descrição
 
-A desenvolver
+A desenvolver...
