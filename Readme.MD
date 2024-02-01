@@ -113,4 +113,45 @@ int main() {
 
 ## Descrição
 
-A desenvolver...
+A `Stack` é uma implementação simples de uma pilha em C/C++, projetada para fornecer funcionalidades básicas de armazenamento e manipulação de elementos.
+
+## Características
+
+- **Alocação Dinâmica:** A estrutura utiliza alocação dinâmica de memória para permitir o crescimento automático conforme a necessidade.
+- **Operações Básicas:** Inclui operações comuns de pilha, como empilhar (push), desempilhar (pop), verificar se está vazia, entre outras.
+- **Tipos Genéricos:** Pode ser usado com diferentes tipos de dados, incluindo inteiros, floats, caracteres, etc.
+- **Iteração:** Suporta a iteração através dos elementos usando a função `forEach`.
+
+## funçoes
+- **push(T element);**: Adiciona um elemento à pilha.
+- **pop();**: Remove e retorna o elemento do topo da pilha.
+- **isEmpty();**: Verifica se a pilha está vazia.
+- **forEach(void (*func)(T));**: Executa a função fornecida em cada elemento da pilha.
+- **toArray();**: Retorna um array contendo os elementos da pilha.
+- **peek();**: Retorna o elemento do topo da pilha sem remover.
+
+## Uso Básico
+
+```cpp
+#include "ArrayStack.h"
+
+int main() {
+    // Criando uma instância da ArrayStack
+    ArrayStack<int> pilha;
+
+    // Adicionando elementos à pilha
+    pilha.push(1);
+    pilha.push(5);
+
+    // Iterando e imprimindo os elementos
+    pilha.forEach([](int x) {
+        cout << x << endl;
+    });
+
+    // Removendo um elemento
+    int elementoRemovido = pilha.pop();
+    int elementoTopo = pilha.peek();
+    
+    return 0;
+}
+```
